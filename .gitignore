@@ -5,6 +5,7 @@ dist/
 .dev-pg-data/
 frontend/node_modules/
 frontend/dist/
+coverage/
 *.log
 .DS_Store
 

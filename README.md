@@ -274,13 +274,17 @@ The application will be accessible at **`http://localhost:3000`**.
 The test suite validates concurrency safety against **real PostgreSQL instances** using `embedded-postgres`. In-memory mocks are not used for locking verification.
 
 ```bash
-# Run all 29 automated tests (unit + real PostgreSQL integration)
+# Run all 40 automated tests across frontend and backend
 npm test
+
+# Generate full code coverage report
+npm run test:coverage
 ```
 
 ### Test Coverage Overview:
 - `tests/normalize.test.ts` (4 unit tests): Defanging `hxxp`, `[.]`, `(:)`, case normalization, whitespace trimming.
 - `tests/coordinator.test.ts` (9 tests): Domain models, idempotency replaying, two-phase claims.
+- `frontend/src/utils/validation.test.ts` (11 unit tests): Frontend IOC refanging, hash/IP/domain/URL validation (100% coverage).
 - `tests/businessRules.test.ts` (12 integration tests against Real PostgreSQL):
   1. Exactly 10 distinct requests obtain leases when quota is 10.
   2. $\ge 200$ concurrent distinct requests never result in $>10$ reservations or completions.
