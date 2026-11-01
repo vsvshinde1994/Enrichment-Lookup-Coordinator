@@ -368,3 +368,11 @@ npm test
   - Total Input Tokens: `2,749,853` (~2.75M)
   - Total Output Tokens: `233,262` (~233k)
   - Total Cache Read Tokens: `45,426,954` (~45.4M)
+
+---
+
+## 📑 Additional Documentation
+
+- **[Implementation Plan (`PLAN.md`)](PLAN.md):** Complete architectural breakdown, phase-by-phase engineering roadmap, concurrency analysis, and risk mitigation strategies planned prior to implementation.
+- **[Full Prompts Audit Trail (`PROMPTS.md`)](PROMPTS.md):** Chronological log of all prompts, technical queries, iterations, and corrections during development.
+
