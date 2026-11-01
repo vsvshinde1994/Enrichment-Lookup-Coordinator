@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.env
 .test-real-pg/
 .dev-pg-data/
 frontend/node_modules/
