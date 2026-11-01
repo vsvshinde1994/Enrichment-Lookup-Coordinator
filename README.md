@@ -2,6 +2,10 @@
 
 A production-grade, concurrency-safe full-stack threat intelligence coordination system built with **React**, **TypeScript**, **Vite**, **Node.js**, **Express**, and **PostgreSQL**.
 
+> 🌐 **Live Application URL:** [https://enrichment-lookup-coordinator.onrender.com](https://enrichment-lookup-coordinator.onrender.com)  
+> 🟢 **API Health Endpoint:** [https://enrichment-lookup-coordinator.onrender.com/health](https://enrichment-lookup-coordinator.onrender.com/health)  
+> 📊 **Live Quota Telemetry:** [https://enrichment-lookup-coordinator.onrender.com/api/quota](https://enrichment-lookup-coordinator.onrender.com/api/quota)
+
 ---
 
 ## 🛡️ Project Overview & Problem Statement
@@ -321,7 +325,12 @@ npm test
    docker compose down -v
    ```
 
-### Deploying to Cloud Platforms (Render, Fly.io, Railway, AWS ECS)
+### Cloud Platforms (Render, Fly.io, Railway, AWS ECS)
+
+- **Live Production URL:** [https://enrichment-lookup-coordinator.onrender.com](https://enrichment-lookup-coordinator.onrender.com)
+- **1-Click Render Blueprint:** The repository includes [`render.yaml`](render.yaml). In Render, click **New + $\to$ Blueprint**, connect this repository, and Render will automatically provision both the managed PostgreSQL database and the Docker web service with zero manual configuration.
+
+#### Manual Cloud Configuration
 1. Provision a managed PostgreSQL instance and copy the `DATABASE_URL`.
 2. Configure the required environment variables:
    - `PORT=3000`
